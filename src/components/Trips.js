@@ -32,8 +32,9 @@ function getTrips(data) {
     data.allTripsJson.edges.forEach((item, index) => {
         tripsArray.push(
             <ProductCard key={index}>
-                <ProductImg src={item.node.img.childImageSharp.fluid.src}
-                alt={item.node.alt}
+                <ProductImg 
+                    src={item.node.img.childImageSharp.fluid.src}
+                    alt={item.node.alt}
                     fluid={item.node.img.childImageSharp.fluid}
                     />
                     <ProductInfo>
@@ -44,7 +45,7 @@ function getTrips(data) {
                         <Button to="/trips" 
                             primary="true" 
                             round="true"
-                        css={`position: absolute; 
+                            css={`position: absolute; 
                             top: 420px; 
                             font-size: 14px;`}>
                         {item.node.button}</Button>
@@ -68,6 +69,7 @@ export default Trips
 const ProductContainer = styled.div`
     min-height: 100vh;
     padding: 5rem calc((100vw -1300px) / 2);
+    background: #9e9e9e;
     color: #fff;
 `
 
@@ -81,7 +83,7 @@ const ProductHeading = styled.div`
 const ProductWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 12px;
+    grid-gap: 10px;
     justify-items: center;
     padding: 0 2rem;
 
@@ -102,7 +104,6 @@ const ProductCard = styled.div`
     border-radius: 10px;
     transition: .2s ease;
 `
-
 
 const ProductImg = styled(Img)`
     height: 100%;
