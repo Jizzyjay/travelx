@@ -1,27 +1,38 @@
 import React from 'react'
 import styled from 'styled-components'
-import { GiEarthAmerica } from 'react-icons/gi'
+import { BiWorld } from 'react-icons/bi'
 import { MdAirplanemodeActive, MdTimer } from 'react-icons/md'
 import { FaMoneyCheck } from 'react-icons/fa'
 
 const StatData = [
     {
-        icons: (<GiEarthAmerica /> ),
+        icons: (<BiWorld 
+            css={`
+            color: #047bf1;`} 
+            /> ),
         title: "Over 120 Destinations",
         desc: "Travel to over 120 unique destinations",
     },
     {
-        icons: (<MdAirplanemodeActive /> ),
+        icons: (<MdAirplanemodeActive 
+            css={`
+            color: #f3a82e;`}
+            /> ),
         title: "1 million Trips Made",
         desc: "Over 1 million trips completed last year",
     },
     {
-        icons: (<MdTimer /> ),
+        icons: (<MdTimer 
+            css={`
+            color: #f34f2e;`}
+        /> ),
         title: "Fastest Customer Support",
         desc: "Access our Customer Support 24/7",
     },
     {
-        icons: (<FaMoneyCheck /> ),
+        icons: (<FaMoneyCheck 
+            css={`
+            color: #3af576;`}/> ),
         title: "Best Deals",
         desc: "We offer the best prices",
     },
@@ -86,13 +97,15 @@ const StatBox = styled.div`
 `
 
 const Icon = styled.div`
-    font-style: 3rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
 `
 
-const Title = styled.div`
-    font-style: clamp(1rem, 2.5vw, 1.5rem);
+const Title = styled.p`
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
     margin-bottom: .5rem;
 `
 
-const Description = styled.div``
+const Description = styled.p`
+    font-size: 1.5rem:
+`
